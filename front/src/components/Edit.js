@@ -12,6 +12,11 @@ const Edit = (props) => {
       props.handleEdit(cars)
    }
 
+   const handleDelete = (event) => {
+    event.preventDefault()
+    props.handleDelete(cars)
+   }
+
   return(
     <>
       <details>
@@ -37,12 +42,17 @@ const Edit = (props) => {
                 <input type="text" name='color' onChange={handleChange} value={cars.color}/>
                 <br/>
                 <br/>
+                <label htmlFor="price">Price: </label>
+                <input type="text" name='price' onChange={handleChange} value={cars.price}/>
+                <br/>
+                <br/>
                 <label htmlFor="image">Image: </label>
                 <input type="text" name='image' onChange={handleChange} value={cars.image}/>
                 <br/>
                 <br/>
                 <input type="submit"/>
             </form>
+            <button onClick={ () => {handleDelete(cars) } }>Delete</button>
       </details>
     </>
   )

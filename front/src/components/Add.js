@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const Add = (props) => {
-    const [cars, setCars] = useState({year: 0, make: '', model: '', color: '', miles: 0, image: ''})
+    const [cars, setCars] = useState({year: 0, make: '', model: '', color: '', miles: 0, image: '', price: 0})
 
 
     const handleChange = (event) => {
@@ -18,6 +18,8 @@ const Add = (props) => {
 
     return (
         <>
+        <details>
+            <summary className='add'>Add Cars</summary>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="make">Make: </label>
                 <input type="text" name='make' onChange={handleChange} />
@@ -39,12 +41,17 @@ const Add = (props) => {
                 <input type="text" name='color' onChange={handleChange} />
                 <br/>
                 <br/>
+                <label htmlFor="price">Price: </label>
+                <input type="text" name='price' onChange={handleChange} />
+                <br/>
+                <br/>
                 <label htmlFor="image">Image: </label>
                 <input type="text" name='image' onChange={handleChange} />
                 <br/>
                 <br/>
                 <input type="submit"/>
             </form>
+            </details>
         </>
     )
 }

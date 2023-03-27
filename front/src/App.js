@@ -3,6 +3,7 @@ import axios from 'axios'
 import Cars from './components/Cars'
 import Add from './components/Add'
 import Edit from './components/Edit'
+import './App.css'
 
 const App = () => {
   // State Variables
@@ -50,15 +51,15 @@ const App = () => {
 
   return (
   <>
-    <h1>Cars</h1>
+    <h1>Cars Showroom</h1>
     <Add handleCreate={handleCreate}/>
     {cars.map((cars) => {
       return (
         <>
-          <Cars cars={cars} />
-          <Edit cars={cars} handleEdit={handleEdit} />
-          <button onClick={ () => {handleDelete(cars) } }>delete</button>
-
+          <div className='home'>
+            <Cars cars={cars} />
+            <Edit cars={cars} handleEdit={handleEdit} />
+          </div>
         </>
       )
     })}
