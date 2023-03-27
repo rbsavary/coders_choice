@@ -40,3 +40,11 @@ h1 {
   font-size: 48px;
   color: darkolivegreen;
 }
+
+#submit {
+  margin-bottom: 20px;
+}
+
+#edit {
+  margin-bottom: 10px;
+}

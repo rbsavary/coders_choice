@@ -20,7 +20,7 @@ const Edit = (props) => {
   return(
     <>
       <details>
-        <summary>Edit Car</summary>
+        <summary id='edit'>Edit Car</summary>
         <form onSubmit={handleSubmit}>
                 <label htmlFor="make">Make: </label>
                 <input type="text" name='make' onChange={handleChange} value={cars.make}/>
@@ -50,7 +50,7 @@ const Edit = (props) => {
                 <input type="text" name='image' onChange={handleChange} value={cars.image}/>
                 <br/>
                 <br/>
-                <input type="submit"/>
+                <input id='submit' type="submit"/>
             </form>
             <button onClick={ () => {handleDelete(cars) } }>Delete</button>
       </details>
